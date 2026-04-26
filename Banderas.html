@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Banderas</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .bandera {
+            width: 200px;
+            height: 120px;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+
+        /* Francia */
+        .francia {
+            background: linear-gradient(to right,
+                #0055A4 33.3%,
+                #FFFFFF 33.3% 66.6%,
+                #EF4135 66.6%);
+        }
+
+        /* Alemania */
+        .alemania {
+            background: linear-gradient(to bottom,
+                #000000 33.3%,
+                #DD0000 33.3% 66.6%,
+                #FFCE00 66.6%);
+        }
+
+        /* Italia */
+        .italia {
+            background: linear-gradient(to right,
+                #009246 33.3%,
+                #FFFFFF 33.3% 66.6%,
+                #CE2B37 66.6%);
+        }
+
+        /* Países Bajos */
+        .paises-bajos {
+            background: linear-gradient(to bottom,
+                #AE1C28 33.3%,
+                #FFFFFF 33.3% 66.6%,
+                #21468B 66.6%);
+        }
+
+        /* Rusia */
+        .rusia {
+            background: linear-gradient(to bottom,
+                #FFFFFF 33.3%,
+                #0039A6 33.3% 66.6%,
+                #D52B1E 66.6%);
+        }
+
+        /* Bélgica */
+        .belgica {
+            background: linear-gradient(to right,
+                #000000 33.3%,
+                #FFD90C 33.3% 66.6%,
+                #EF4135 66.6%);
+        }
+
+        /* Austria */
+        .austria {
+            background: linear-gradient(to bottom,
+                #ED2939 33.3%,
+                #FFFFFF 33.3% 66.6%,
+                #ED2939 66.6%);
+        }
+
+        /* Japón */
+        .japon {
+            background: white;
+            position: relative;
+        }
+        .japon::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background: #BC002D;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Ucrania */
+        .ucrania {
+            background: linear-gradient(to bottom,
+                #0057B7 50%,
+                #FFD700 50%);
+        }
+
+        /* Polonia */
+        .polonia {
+            background: linear-gradient(to bottom,
+                #FFFFFF 50%,
+                #DC143C 50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Banderas</h1>
+
+    <div class="bandera francia"></div>
+    <div class="bandera alemania"></div>
+    <div class="bandera italia"></div>
+    <div class="bandera paises-bajos"></div>
+    <div class="bandera rusia"></div>
+    <div class="bandera belgica"></div>
+    <div class="bandera austria"></div>
+    <div class="bandera japon"></div>
+    <div class="bandera ucrania"></div>
+    <div class="bandera polonia"></div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</htm
